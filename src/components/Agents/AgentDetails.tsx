@@ -1,9 +1,9 @@
 import type { FC } from 'react'
 import { IAgent } from '../../types/Agent'
 
-import './Agent.css'
+import './AgentDetails.css'
 
-const Agent: FC<{ agent: IAgent }> = ({ agent }) => {
+const AgentDetails: FC<{ agent: IAgent }> = ({ agent }) => {
   return (
     <div className="container">
       <header>
@@ -27,4 +27,4 @@ const Agent: FC<{ agent: IAgent }> = ({ agent }) => {
   )
 }
 
-export default Agent
+export default AgentDetails
