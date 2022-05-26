@@ -1,13 +1,15 @@
-.container {
-  margin: 2rem;
+
+.card {
+  margin: 1.5rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(79, 82, 177, 0.35);
   display: inline-flex;
   flex-direction: column;
   text-align: center;
-  width: 359px;
-  margin-bottom: 112px;
+  width: 20rem;
+  /* margin-bottom: 112px; */
+  /* border: 1px solid black; */
 
 }
 
