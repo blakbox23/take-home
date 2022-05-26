@@ -8,9 +8,9 @@ app.get('/agents', async (req, res, next) => {
   return res.json(agents);
 });
 
-app.get('/agents/2', async (req, res, next) => {
-  const agents = await Agent.findByPk(2);
-  return res.json(agents);
+app.get('/agents/:id', async (req, res, next) => {
+  const agent = await Agent.findByPk(req.params.id);
+  return res.json(agent); 
 });
 
 

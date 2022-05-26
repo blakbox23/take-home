@@ -1,29 +1,29 @@
-import type { FC } from 'react'
-import { useState, useEffect } from 'react'
+import React from 'react'
+import { useEffect } from 'react'
 import Agent from './Agent'
-import { IAgent } from '../../types/Agent'
-import axios from 'axios'
+// import { IAgent } from '../../types/Agent'
 import './Agents.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchAgents } from '../../store/Actions/AgentsActions'
+import { useSelector } from 'react-redux'
 import { RootState } from '../../store/Reducers/rootReducer'
+import { IAgent } from '../../types/Agent'
 
-const Agents: FC = () => {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchAgents())
-  }, [dispatch])
-
-  const { pending, agents, error } = useSelector(
+const Agents = () => {
+  const { error, agents, pending } = useSelector(
     (state: RootState) => state.agents,
   )
 
+  let allAgents: IAgent[] = agents
+
+  if (allAgents) {
+    allAgents = agents
+  }
+
   return (
     <div className="agents">
-      {agents.map((agent) => (
-        <Agent key={agent.id} agent={agent} />
-      ))}
+      {allAgents &&
+        allAgents.map((agent: IAgent) => (
+          <Agent key={agent.id} agent={agent} />
+        ))}
     </div>
   )
 }

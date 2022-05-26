@@ -3,15 +3,10 @@ import { agentsApi } from '../agentsApi';
 import { fetchagentsFailure, fetchagentsSuccess } from '../Actions/AgentsActions';
 import { agentTypes } from '../ActionTypes/Agenttypes';
 
-//   async function fetchInitialData() {
-  //     const response = await axios.get('/agents/')
-  //     setAgents(response.data)
-  //   }
-  //   fetchInitialData()
-
 function* workFetchAgents(): any {
     try {
        const responseData = yield call(agentsApi.getAgents);
+     
     yield put(
         fetchagentsSuccess({
           agents: responseData

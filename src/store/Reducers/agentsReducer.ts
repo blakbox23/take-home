@@ -33,6 +33,27 @@ const agentsReducer = (state = initialState, action: AgentsActions) => {
         pending: false,
         error: action.payload.error
       };
+
+      case agentTypes.FETCH_AGENT_BYID:
+        return {
+            ...state,
+            pending: true,
+        };
+
+        case agentTypes.FETCH_AGENT_BYID_SUCCESS: 
+        return {
+        ...state,
+        pending: false,
+        agent: action.payload.agent,
+        error: null
+      };
+
+      case agentTypes.FETCH_AGENT_BYID_FAILURE:
+      return {
+        ...state,
+        pending: false,
+        error: action.payload.error
+      };
             
       default:
             return {
