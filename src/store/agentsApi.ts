@@ -7,11 +7,15 @@ class AgentsApi {
       return (response.data)
     }
 
-
   async getAgentById(id:string | number){
       const response = await axios.get(`/agents/${id}`)
       return (response.data)
   }
+  
+  //  async searchAgents(){
+  //     const response = await axios.get('/search')
+  //     return (response.data)
+  // }
 }
 
 

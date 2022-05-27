@@ -8,17 +8,63 @@
 
 .nav-sec {
   width: 90%;
-  margin: 1rem auto;
+  margin: 2rem auto;
   display: flex;
   justify-content: flex-end;
+}
+
+.search-form {
+  margin-right: auto;
+  display: flex;
+  width: 50%;
+  border: 1px solid fuchsia;
+}
+
+.search-term{
+  width: 70%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  background-color: azure;
+}
+
+.search-submit{
+  width: 30%;;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  background-color:rgb(114, 88, 138);
+  color: #fff;
+  border: none;
 }
 
 .join-button {
   color: #fff;
   background-color: rgb(114, 88, 138);
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 10px;
   font-family: "Poppins", sans-serif;
+}
+
+.search-result-div {
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(79, 82, 177, 0.35);
+  
+}
+
+.search-result-text{
+  font-size: 1.5rem;
+}
+
+.back-button {
+  padding: 0.7rem 1.7rem;
+  background-color: #fff;
+  color: rgb(114, 88, 138);
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-decoration: underline;
 }
