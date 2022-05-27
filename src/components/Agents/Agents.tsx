@@ -12,22 +12,25 @@ const Agents = () => {
     (state: RootState) => state.agents,
   )
 
-  const [showForm, setShowForm] = useState(false)
-
-  const openForm = () => {
-    setShowForm(!showForm)
-  }
-
   let allAgents: IAgent[] = agents
-
   if (allAgents) {
     allAgents = agents
   }
 
+  const [show, setShow] = useState(false)
+
+  const onFormShow = () => setShow(true)
+  const onFormHide = () => setShow(false)
+
   return (
     <div>
-      {showForm && <AddAgent />}
-      <button onClick={openForm}>Join Agents</button>
+      <div className="nav-sec">
+        <button className="join-button" onClick={onFormShow}>
+          Join the team
+        </button>
+      </div>
+
+      {show && <AddAgent show={show} onClose={onFormHide} />}
       <div className="agents">
         {allAgents &&
           allAgents.map((agent: IAgent) => (
