@@ -8,9 +8,10 @@
   flex-direction: column;
   text-align: center;
   width: 20rem;
-  /* margin-bottom: 112px; */
-  /* border: 1px solid black; */
+}
 
+a:link {
+  text-decoration: none;
 }
 
 .avatar-container {
