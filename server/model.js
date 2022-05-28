@@ -5,7 +5,12 @@ const sequelize = new Sequelize({
   storage: './database.sqlite3'
 });
 
-class Agent extends Sequelize.Model { }
+class Agent extends Sequelize.Model {
+  static associate({Review}) {
+    // define association here
+    this.hasMany(Review, {foreignKey: 'agentId', as: 'reviews' })
+  }
+ } 
 Agent.init(
   {
     // attributes
@@ -42,7 +47,7 @@ Agent.init(
   },
   {
     sequelize,
-    modelName: 'Agents'
+    modelName: 'agents'
     // options
   }
 );
