@@ -1,6 +1,4 @@
-# Atllas Software Engineering Take-Home Exercise
-
-🌟 Welcome to the Atllas take-home coding exercise! 🌟
+# Engineering Take-Home Exercise
 
 This full-stack exercise involves building a form component in React that also makes a request to the Node.js/Express.js backend. We imagine you should spend around _four hours at minimum_ to implement this feature, but want to emphasize that there is no specific deadline, or ticking clock for the implementation time. You can feel free to break the work up over multiple days. The entire point of this exercise is to get a good sense of how you build software.
 
